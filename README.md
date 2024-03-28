@@ -4,7 +4,7 @@ features:
 - sensor calibration (manual)
 - save calibration data to memory
 - restore factory calibration data
-- touch result to tare
+- touch the result on display to tare
 - 20kg sensor
 - TouchGFX app
 
