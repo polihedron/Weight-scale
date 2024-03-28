@@ -1,0 +1,3 @@
+../TouchGFX/target/TouchGFX_DataTransfer.c:9:10:touchgfxDisplayDriverTransmitActive	4	static
+../TouchGFX/target/TouchGFX_DataTransfer.c:14:6:touchgfxDisplayDriverTransmitBlock	24	static
+../TouchGFX/target/TouchGFX_DataTransfer.c:22:6:DMA_SPI_TransmitCompleteILI9341	8	static

@@ -1,0 +1,11 @@
+../Drivers/XPT2046/XPT2046.c:91:6:XPT2046_GetRawData	16	static
+../Drivers/XPT2046/XPT2046.c:110:6:XPT2046_ReadRawData	16	static
+../Drivers/XPT2046/XPT2046.c:119:6:XPT2046_ReadTouchPoint	40	static
+../Drivers/XPT2046/XPT2046.c:141:6:XPT2046_GetTouchPoint	32	static
+../Drivers/XPT2046/XPT2046.c:159:9:XPT2046_IsTouched	4	static
+../Drivers/XPT2046/XPT2046.c:170:6:XPT2046_Task	8	static
+../Drivers/XPT2046/XPT2046.c:262:6:XPT2046_IRQ	8	static
+../Drivers/XPT2046/XPT2046.c:273:6:XPT2046_Init	16	static
+../Drivers/XPT2046/XPT2046.c:316:6:CalibrationPoint	16	static
+../Drivers/XPT2046/XPT2046.c:324:6:CalculateCalibrationData	16	static
+../Drivers/XPT2046/XPT2046.c:353:6:DoCalibration	16	static

@@ -1,0 +1,40 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:91:5:touchgfx::colortype::colortype(uint32_t)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:140:5:touchgfx::Rect::Rect(int16_t, int16_t, int16_t, int16_t)	24	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:37:18:virtual void touchgfx::Presenter::activate()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:47:18:virtual void touchgfx::Presenter::deactivate()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:touchgfx::Presenter::~Presenter()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:virtual touchgfx::Presenter::~Presenter()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:58:5:touchgfx::Presenter::Presenter()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:10:5:ModelListener::ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:12:13:ModelListener::~ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:12:13:virtual ModelListener::~ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:20:18:virtual void ModelListener::Update_Weight_Text(int32_t)	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:21:18:virtual void ModelListener::Update_RawWeight_Text(uint32_t)	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:22:18:virtual void ModelListener::Update_CalibrationX0_Text(uint32_t)	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:23:18:virtual void ModelListener::Update_CalibrationY0_Text(uint32_t)	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:24:18:virtual void ModelListener::Update_CalibrationX1_Text(uint32_t)	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::Update_CalibrationY1_Text(uint32_t)	16	static
+../TouchGFX/gui/include/gui/settingsscreen_screen/SettingsScreenPresenter.hpp:28:13:SettingsScreenPresenter::~SettingsScreenPresenter()	16	static
+../TouchGFX/gui/include/gui/settingsscreen_screen/SettingsScreenPresenter.hpp:28:13:virtual SettingsScreenPresenter::~SettingsScreenPresenter()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:59:5:touchgfx::TypedText::TypedText(touchgfx::TypedTextId)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	16	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:4:1:SettingsScreenPresenter::SettingsScreenPresenter(SettingsScreenView&)	16	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:10:6:virtual void SettingsScreenPresenter::activate()	16	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:15:6:virtual void SettingsScreenPresenter::deactivate()	16	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:19:6:virtual void SettingsScreenPresenter::Update_Weight_Text(int32_t)	16	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:24:6:virtual void SettingsScreenPresenter::Update_RawWeight_Text(uint32_t)	16	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:29:6:virtual void SettingsScreenPresenter::Update_CalibrationX0_Text(uint32_t)	16	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:34:6:virtual void SettingsScreenPresenter::Update_CalibrationY0_Text(uint32_t)	16	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:38:6:virtual void SettingsScreenPresenter::Update_CalibrationX1_Text(uint32_t)	16	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:42:6:virtual void SettingsScreenPresenter::Update_CalibrationY1_Text(uint32_t)	16	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:46:6:virtual void SettingsScreenPresenter::Cx0_Update(double)	24	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:50:6:virtual void SettingsScreenPresenter::Cx1_Update(double)	24	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:54:6:virtual void SettingsScreenPresenter::Cy0_Update(double)	24	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:58:6:virtual void SettingsScreenPresenter::Cy1_Update(double)	24	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:62:6:virtual void SettingsScreenPresenter::save_Calibration()	16	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:66:6:virtual void SettingsScreenPresenter::restore_Calibration()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Keyboard.hpp:74:12:touchgfx::Keyboard::Layout::~Layout()	16	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:69:1:void __static_initialization_and_destruction_0(int, int)	32	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:69:1:cpp)	8	static
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenPresenter.cpp:69:1:cpp)	8	static
