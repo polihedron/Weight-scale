@@ -6,9 +6,30 @@ features:
 - restore factory calibration data
 - touch the result on display to tare
 - 20kg sensor
-- TouchGFX app
-
+- fast TouchGFX app (LL SPI with DMA) 
+- usb c charging port
+<br><br>
 made on request to control baby weight increase.
+<br><br>
+![set](https://github.com/polihedron/Weight-scale/blob/main/hardware/images/set.png)
+
+![calibration](https://github.com/polihedron/Weight-scale/blob/main/hardware/images/calibration.png)
+
+![keypad](https://github.com/polihedron/Weight-scale/blob/main/hardware/images/keypad.png)
+
+![side](https://github.com/polihedron/Weight-scale/blob/main/hardware/images/side.png)
+
+
+<br><br><br>
+based on:
+
+https://github.com/trteodor/TouchGFX_PortTo_STM32F407_ILI9341_XPT2046
+
+https://www.youtube.com/playlist?list=PLfIJKC1ud8giOsk-C4BCOwSHtbXqTNb1W
+
+<br><br><br>
+
+
 
 BOM:
 - WeAct v2 Blackpill STM32F411CEU dev board with soldered U3: FRAM 8kB chip: MB85RS64V (Adafruit 1897)
@@ -38,6 +59,10 @@ BOM:
 ![XL63020-TPS63020](https://github.com/polihedron/Weight-scale/assets/46649005/953dd725-5dd0-478c-9b5c-fef0846f7044)
 
 
+
 - TP4056 module
   
 ![TC4056A](https://github.com/polihedron/Weight-scale/assets/46649005/2ee10065-c3de-41d2-b03a-b316fe54d963)
+
+
+
