@@ -22,7 +22,7 @@ future improvements:
 - RTC module
 - automatic calibration
 - bettter LCD display (IPS)
-- better data from sensor filtering
+- better sensor data filtering
 
 
 <br><br>
