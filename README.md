@@ -46,6 +46,8 @@ https://github.com/trteodor/TouchGFX_PortTo_STM32F407_ILI9341_XPT2046
 
 https://www.youtube.com/playlist?list=PLfIJKC1ud8giOsk-C4BCOwSHtbXqTNb1W
 
+http://ufnalski.edu.pl/stm32_projects/hx711_non_blocking_dma/
+
 <br><br><br>
 
 
