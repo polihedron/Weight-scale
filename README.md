@@ -48,6 +48,8 @@ https://www.youtube.com/playlist?list=PLfIJKC1ud8giOsk-C4BCOwSHtbXqTNb1W
 
 http://ufnalski.edu.pl/stm32_projects/hx711_non_blocking_dma/
 
+https://github.com/RIYADHABBES/TouchGFX_NumericKyboard
+
 <br><br><br>
 
 
