@@ -22,8 +22,12 @@ future improvements:
 - RTC module
 - automatic calibration
 - bettter LCD display (IPS)
+- screen auto brightness
 - better sensor data filtering
 
+
+3D files:
+https://www.thingiverse.com/thing:6554794
 
 <br><br>
 ![set](https://github.com/polihedron/Weight-scale/blob/main/hardware/images/set.png)
