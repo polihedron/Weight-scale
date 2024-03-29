@@ -1,6 +1,11 @@
 # Weight-scale
-Simple weight scale
+Simple weight scale made on request to control baby weight increase. 
+<br>
+
+<br>
+
 features:
+- 2.8" LCD with touch screen
 - sensor calibration (manual)
 - save calibration data to memory
 - restore factory calibration data
@@ -8,8 +13,18 @@ features:
 - 20kg sensor
 - fast TouchGFX app (LL SPI with DMA) 
 - usb c charging port
-<br><br>
-made on request to control baby weight increase.
+
+<br>
+
+future improvements:
+- usb pendrive log data
+- environmental sensor to measure relative humidity, barometric pressure and ambient temperature
+- RTC module
+- automatic calibration
+- bettter LCD display (IPS)
+- better data from sensor filtering
+
+
 <br><br>
 ![set](https://github.com/polihedron/Weight-scale/blob/main/hardware/images/set.png)
 
