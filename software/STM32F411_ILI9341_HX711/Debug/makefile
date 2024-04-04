@@ -39,6 +39,7 @@ RM := rm -rf
 -include TouchGFX/App/subdir.mk
 -include Drivers/XPT2046/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
+-include Drivers/MB85RS64V/subdir.mk
 -include Drivers/ILI9341/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk

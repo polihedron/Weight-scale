@@ -41,6 +41,7 @@ SUBDIRS := \
 Core/Src \
 Core/Startup \
 Drivers/ILI9341 \
+Drivers/MB85RS64V \
 Drivers/STM32F4xx_HAL_Driver/Src \
 Drivers/XPT2046 \
 TouchGFX/App \

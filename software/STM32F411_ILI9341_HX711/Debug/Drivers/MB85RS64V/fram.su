@@ -1,0 +1,6 @@
+../Drivers/MB85RS64V/fram.c:13:6:setSPI_FRAM_Handle	16	static
+../Drivers/MB85RS64V/fram.c:25:6:FRAM_init	16	static
+../Drivers/MB85RS64V/fram.c:68:9:FRAM_read8	24	static
+../Drivers/MB85RS64V/fram.c:96:6:FRAM_write8	24	static
+../Drivers/MB85RS64V/fram.c:126:10:FRAM_read32	24	static
+../Drivers/MB85RS64V/fram.c:157:6:FRAM_write32	24	static

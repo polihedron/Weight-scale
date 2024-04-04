@@ -28,9 +28,9 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "fram.h"
+#include "../../Drivers/MB85RS64V/fram.h"
 #include "../../Drivers/ili9341/core.h"
-#include "../../XPT2046/XPT2046.h"
+#include "../../Drivers/XPT2046/XPT2046.h"
 #include "simple_filters.h"
 /* USER CODE END Includes */
 
@@ -162,7 +162,7 @@ int main(void)
   /* Initialize interrupts */
   MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
-
+  setSPI_FRAM_Handle(&hspi1);
   FRAM_init();
   doMemories();
   HAL_TIM_Base_Start_IT(&htim2);
