@@ -46,8 +46,9 @@
 
 
 #define FRAM_CS_DISABLE HAL_GPIO_WritePin(FRAM_CS_GPIO_Port, FRAM_CS_Pin, 1)
-
-
+#define SENSOR_MAXIMUM_IN_GRAM	20000
+#define LOAD_PLATFORM_WEIGHT_IN_GRAM	5000
+#define DISPLAY_REFRESH_DELAY_MS 500
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -352,12 +353,16 @@ void saveMemories(void)	{
 
 void doMeasure (void) {
 
- if (sensor_read_flag == 1)	{
+	int32_t weight_avg_temp;
+	uint32_t raw_avg_temp;
 
-	  get_raw_weight( &raw );
-  }
+	if (sensor_read_flag == 1)
+	{
+		get_raw_weight( &raw );
+		raw_avg_temp = filter_moving_average(raw);
+		weight_avg_temp  = filter_median(get_weight(raw_avg)- get_weight(raw_avg_offset));
+	}
 
- uint32_t raw_filter = filter_moving_average(raw);
 
 	if ((sensor_read_flag == 1) && (HAL_GPIO_ReadPin(SPI2_MISO_GPIO_Port, SPI2_MISO_Pin) == GPIO_PIN_RESET))
 	{
@@ -365,19 +370,21 @@ void doMeasure (void) {
 		HAL_SPI_TransmitReceive_DMA(&hspi2, (uint8_t*) (&TxData), (uint8_t*) (&RxData), sizeof(TxData));
 	}
 
-	  if ((HAL_GetTick() - SoftTimer) > 50) {
+	if ((HAL_GetTick() - SoftTimer) > DISPLAY_REFRESH_DELAY_MS) {
 
-		  raw_avg = raw_filter;
-		  weight_avg  = filter_median(get_weight(raw_avg)- get_weight(raw_avg_offset));
+		raw_avg = raw_avg_temp;
 
-
-		if	(weight_avg > 15000 )
+		if	(weight_avg > (SENSOR_MAXIMUM_IN_GRAM - LOAD_PLATFORM_WEIGHT_IN_GRAM)  )
 		{
-			weight_avg = 15000;
+			weight_avg = SENSOR_MAXIMUM_IN_GRAM - LOAD_PLATFORM_WEIGHT_IN_GRAM;
+		}
+		else
+		{
+			weight_avg  = weight_avg_temp;
 		}
 
 		SoftTimer = HAL_GetTick();
-	  }
+	 }
 
 }
 
@@ -385,37 +392,37 @@ void doMeasure (void) {
 
 void get_raw_weight(double *raw_reading )	{
 
-	*raw_reading = (((uint64_t) (RxData[7] & 0b00000010)) >> 1)
-			| (((uint64_t) (RxData[7] & 0b00001000)) >> 2)
-			| (((uint64_t) (RxData[7] & 0b00100000)) >> 3)
-			| (((uint64_t) (RxData[7] & 0b10000000)) >> 4)
-			| (((uint64_t) (RxData[6] & 0b00000010)) << 3)
-			| (((uint64_t) (RxData[6] & 0b00001000)) << 2)
-			| (((uint64_t) (RxData[6] & 0b00100000)) << 1)
-			| (((uint64_t) (RxData[6] & 0b10000000)) << 0) |
+*raw_reading = (((uint64_t) (RxData[7] & 0b00000010)) >> 1)
+	| (((uint64_t) (RxData[7] & 0b00001000)) >> 2)
+	| (((uint64_t) (RxData[7] & 0b00100000)) >> 3)
+	| (((uint64_t) (RxData[7] & 0b10000000)) >> 4)
+	| (((uint64_t) (RxData[6] & 0b00000010)) << 3)
+	| (((uint64_t) (RxData[6] & 0b00001000)) << 2)
+	| (((uint64_t) (RxData[6] & 0b00100000)) << 1)
+	| (((uint64_t) (RxData[6] & 0b10000000)) << 0) |
 
-			(((uint64_t) (RxData[5] & 0b00000010)) << 7)
-			| (((uint64_t) (RxData[5] & 0b00001000)) << 6)
-			| (((uint64_t) (RxData[5] & 0b00100000)) << 5)
-			| (((uint64_t) (RxData[5] & 0b10000000)) << 4)
-			| (((uint64_t) (RxData[4] & 0b00000010)) << 11)
-			| (((uint64_t) (RxData[4] & 0b00001000)) << 10)
-			| (((uint64_t) (RxData[4] & 0b00100000)) << 9)
-			| (((uint64_t) (RxData[4] & 0b10000000)) << 8) |
+	(((uint64_t) (RxData[5] & 0b00000010)) << 7)
+	| (((uint64_t) (RxData[5] & 0b00001000)) << 6)
+	| (((uint64_t) (RxData[5] & 0b00100000)) << 5)
+	| (((uint64_t) (RxData[5] & 0b10000000)) << 4)
+	| (((uint64_t) (RxData[4] & 0b00000010)) << 11)
+	| (((uint64_t) (RxData[4] & 0b00001000)) << 10)
+	| (((uint64_t) (RxData[4] & 0b00100000)) << 9)
+	| (((uint64_t) (RxData[4] & 0b10000000)) << 8) |
 
-			(((uint64_t) (RxData[3] & 0b00000010)) << 15)
-			| (((uint64_t) (RxData[3] & 0b00001000)) << 14)
-			| (((uint64_t) (RxData[3] & 0b00100000)) << 13)
-			| (((uint64_t) (RxData[3] & 0b10000000)) << 12)
-			| (((uint64_t) (RxData[2] & 0b00000010)) << 19)
-			| (((uint64_t) (RxData[2] & 0b00001000)) << 18)
-			| (((uint64_t) (RxData[2] & 0b00100000)) << 17)
-			| (((uint64_t) (RxData[2] & 0b10000000)) << 16) |
+	(((uint64_t) (RxData[3] & 0b00000010)) << 15)
+	| (((uint64_t) (RxData[3] & 0b00001000)) << 14)
+	| (((uint64_t) (RxData[3] & 0b00100000)) << 13)
+	| (((uint64_t) (RxData[3] & 0b10000000)) << 12)
+	| (((uint64_t) (RxData[2] & 0b00000010)) << 19)
+	| (((uint64_t) (RxData[2] & 0b00001000)) << 18)
+	| (((uint64_t) (RxData[2] & 0b00100000)) << 17)
+	| (((uint64_t) (RxData[2] & 0b10000000)) << 16) |
 
-			(((uint64_t) (RxData[1] & 0b00000010)) << 23)
-			| (((uint64_t) (RxData[1] & 0b00001000)) << 22)
-			| (((uint64_t) (RxData[1] & 0b00100000)) << 21)
-			| (((uint64_t) (RxData[1] & 0b10000000)) << 20);
+	(((uint64_t) (RxData[1] & 0b00000010)) << 23)
+	| (((uint64_t) (RxData[1] & 0b00001000)) << 22)
+	| (((uint64_t) (RxData[1] & 0b00100000)) << 21)
+	| (((uint64_t) (RxData[1] & 0b10000000)) << 20);
 
 }
 

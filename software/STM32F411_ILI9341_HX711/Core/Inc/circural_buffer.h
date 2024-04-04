@@ -8,7 +8,7 @@
 #ifndef INC_CIRCURAL_BUFFER_H_
 #define INC_CIRCURAL_BUFFER_H_
 
-#define BUFFER_SIZE_AVG		100
+#define BUFFER_SIZE_AVG		250
 #define BUFFER_SIZE_MEDIAN		25
 
 typedef struct
