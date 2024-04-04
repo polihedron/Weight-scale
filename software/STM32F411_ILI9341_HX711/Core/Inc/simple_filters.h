@@ -12,7 +12,6 @@
 #include "circural_buffer.h"
 
 void filter_moving_average_init(void);
-int32_t filter_moving_average_int(int32_t new_data);
 uint32_t filter_moving_average_uint(uint32_t new_data);
 
 #endif /* INC_SIMPLE_FILTERS_H_ */

@@ -92,10 +92,10 @@ void saveMemories(void);
 #define TOUCH_IRQ_EXTI_IRQn EXTI9_5_IRQn
 
 /* USER CODE BEGIN Private defines */
-#define CALIBRATION_X1 1410850.0
-#define CALIBRATION_Y1 10000.0
-#define CALIBRATION_X0 421600.0
-#define CALIBRATION_Y0 0.0
+#define CALIBRATION_X1 1410850
+#define CALIBRATION_Y1 10000
+#define CALIBRATION_X0 421600
+#define CALIBRATION_Y0 0
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

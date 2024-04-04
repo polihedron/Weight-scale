@@ -18,24 +18,8 @@ void circular_buffer_uint_init(circular_buffer_uint_t *buff)
 		buff->data_uint[i] = 0;
 	}
 }
-void circular_buffer_int_init(circular_buffer_int_t *buff)
-{
-	buff->head = 0;
-	buff->size = BUFFER_SIZE;
 
-	for (uint32_t i=0; i < buff->size; i++)
-	{
-		buff->data_int[i] = 0;
-	}
-}
 
-void circular_buffer_push_int(circular_buffer_int_t *buff, int32_t new_data)
-{
-	buff->data_int[buff->head] = new_data;
-
-	buff->head++;
-	buff->head = buff->head % buff->size;
-}
 void circular_buffer_push_uint(circular_buffer_uint_t *buff, uint32_t new_data)
 {
 	buff->data_uint[buff->head] = new_data;

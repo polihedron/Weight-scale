@@ -4,8 +4,7 @@
 //#include "stm32f4xx_hal.h"
 #include "main.h"
 extern __IO uint32_t raw_avg;
-extern __IO int32_t weight_avg;
-extern __IO int32_t weight_avg_offset;
+extern __IO uint32_t raw_avg_offset;
 extern __IO int32_t weight_avg;
 extern __IO double CalibrationX0 ;
 extern __IO double CalibrationY0 ;
@@ -31,7 +30,7 @@ void Model::tick()
 }
 void Model::reset_weight(){
 #ifndef SIMULATOR
-	weight_avg_offset = weight_avg;
+	raw_avg_offset = raw_avg;
 #endif
 }
 

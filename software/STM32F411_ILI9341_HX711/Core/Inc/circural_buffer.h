@@ -10,12 +10,7 @@
 
 #define BUFFER_SIZE		400
 
-typedef struct
-{
-	int32_t data_int[BUFFER_SIZE];
-    uint32_t head;
-    uint32_t size;
-} circular_buffer_int_t;
+
 typedef struct
 {
 	uint32_t data_uint[BUFFER_SIZE];
@@ -23,9 +18,7 @@ typedef struct
     uint32_t size;
 } circular_buffer_uint_t;
 
-void circular_buffer_int_init(circular_buffer_int_t *buff);
 void circular_buffer_uint_init(circular_buffer_uint_t *buff);
-void circular_buffer_push_int(circular_buffer_int_t *buff, int32_t new_data);
 void circular_buffer_push_uint(circular_buffer_uint_t *buff, uint32_t new_data);
 
 #endif /* INC_CIRCURAL_BUFFER_H_ */
