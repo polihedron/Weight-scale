@@ -1,14 +1,58 @@
 # Weight-scale
-Simple weight scale
+Simple weight scale made on request to control baby weight increase. 
+<br>
+
+<br>
+
 features:
+- 2.8" LCD with touch screen
 - sensor calibration (manual)
 - save calibration data to memory
 - restore factory calibration data
 - touch the result on display to tare
 - 20kg sensor
-- TouchGFX app
+- fast TouchGFX app (LL SPI with DMA) 
+- usb c charging port
 
-made on request to control baby weight increase.
+<br>
+
+future improvements:
+- usb pendrive log data
+- environmental sensor to measure relative humidity, barometric pressure and ambient temperature
+- RTC module
+- automatic calibration
+- bettter LCD display (IPS)
+- screen auto brightness
+- better sensor data filtering
+
+
+3D files:
+https://www.thingiverse.com/thing:6554794
+
+<br><br>
+![set](https://github.com/polihedron/Weight-scale/blob/main/hardware/images/set.png)
+
+![calibration](https://github.com/polihedron/Weight-scale/blob/main/hardware/images/calibration.png)
+
+![keypad](https://github.com/polihedron/Weight-scale/blob/main/hardware/images/keypad.png)
+
+![side](https://github.com/polihedron/Weight-scale/blob/main/hardware/images/side.png)
+
+
+<br><br><br>
+based on:
+
+https://github.com/trteodor/TouchGFX_PortTo_STM32F407_ILI9341_XPT2046
+
+https://www.youtube.com/playlist?list=PLfIJKC1ud8giOsk-C4BCOwSHtbXqTNb1W
+
+http://ufnalski.edu.pl/stm32_projects/hx711_non_blocking_dma/
+
+https://github.com/RIYADHABBES/TouchGFX_NumericKyboard
+
+<br><br><br>
+
+
 
 BOM:
 - WeAct v2 Blackpill STM32F411CEU dev board with soldered U3: FRAM 8kB chip: MB85RS64V (Adafruit 1897)
@@ -38,6 +82,10 @@ BOM:
 ![XL63020-TPS63020](https://github.com/polihedron/Weight-scale/assets/46649005/953dd725-5dd0-478c-9b5c-fef0846f7044)
 
 
+
 - TP4056 module
   
 ![TC4056A](https://github.com/polihedron/Weight-scale/assets/46649005/2ee10065-c3de-41d2-b03a-b316fe54d963)
+
+
+
