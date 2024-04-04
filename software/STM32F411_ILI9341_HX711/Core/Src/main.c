@@ -175,6 +175,7 @@ int main(void)
   HAL_SPI_TransmitReceive_DMA(&hspi2, (uint8_t*) (&TxData),(uint8_t*) (&RxData), sizeof(TxData));
   SoftTimer = HAL_GetTick();
   filter_moving_average_init();
+  filter_median_init();
   raw_avg_offset = CalibrationX0;
   /* USER CODE END 2 */
 
@@ -356,7 +357,7 @@ void doMeasure (void) {
 	  get_raw_weight( &raw );
   }
 
- uint32_t raw_filter = filter_moving_average_uint(raw);
+ uint32_t raw_filter = filter_moving_average(raw);
 
 	if ((sensor_read_flag == 1) && (HAL_GPIO_ReadPin(SPI2_MISO_GPIO_Port, SPI2_MISO_Pin) == GPIO_PIN_RESET))
 	{
@@ -364,10 +365,10 @@ void doMeasure (void) {
 		HAL_SPI_TransmitReceive_DMA(&hspi2, (uint8_t*) (&TxData), (uint8_t*) (&RxData), sizeof(TxData));
 	}
 
-	  if ((HAL_GetTick() - SoftTimer) > 500) {
+	  if ((HAL_GetTick() - SoftTimer) > 50) {
 
 		  raw_avg = raw_filter;
-		  weight_avg  = get_weight(raw_avg)- get_weight(raw_avg_offset);
+		  weight_avg  = filter_median(get_weight(raw_avg)- get_weight(raw_avg_offset));
 
 
 		if	(weight_avg > 15000 )

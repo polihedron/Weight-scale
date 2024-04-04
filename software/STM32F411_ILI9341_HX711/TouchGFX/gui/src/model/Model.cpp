@@ -6,10 +6,10 @@
 extern __IO uint32_t raw_avg;
 extern __IO uint32_t raw_avg_offset;
 extern __IO int32_t weight_avg;
-extern __IO double CalibrationX0 ;
-extern __IO double CalibrationY0 ;
-extern __IO double CalibrationX1 ;
-extern __IO double CalibrationY1 ;
+extern __IO double CalibrationX0;
+extern __IO double CalibrationY0;
+extern __IO double CalibrationX1;
+extern __IO double CalibrationY1;
 #endif
 
 Model::Model() : modelListener(0)

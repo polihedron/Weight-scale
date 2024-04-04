@@ -1,3 +1,8 @@
-../Core/Src/simple_filters.c:15:6:filter_moving_average_init	1
-../Core/Src/simple_filters.c:22:10:filter_moving_average_uint	1
-../Core/Src/simple_filters.c:32:17:average_uint	2
+../Core/Src/simple_filters.c:19:6:filter_moving_average_init	1
+../Core/Src/simple_filters.c:25:10:filter_moving_average	1
+../Core/Src/simple_filters.c:35:17:average	2
+../Core/Src/simple_filters.c:47:6:filter_median_init	1
+../Core/Src/simple_filters.c:52:9:filter_median	1
+../Core/Src/simple_filters.c:67:13:bubble_sort	4
+../Core/Src/simple_filters.c:83:13:swap	1
+../Core/Src/simple_filters.c:91:9:get_median	2

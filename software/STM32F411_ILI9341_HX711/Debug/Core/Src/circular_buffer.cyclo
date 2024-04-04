@@ -1,2 +1,4 @@
-../Core/Src/circular_buffer.c:11:6:circular_buffer_uint_init	2
-../Core/Src/circular_buffer.c:23:6:circular_buffer_push_uint	1
+../Core/Src/circular_buffer.c:13:6:circular_buffer_average_init	2
+../Core/Src/circular_buffer.c:23:6:circular_buffer_median_init	2
+../Core/Src/circular_buffer.c:34:6:circular_buffer_push_median	1
+../Core/Src/circular_buffer.c:41:6:circular_buffer_push_average	1
