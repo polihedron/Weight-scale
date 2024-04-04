@@ -21,7 +21,7 @@ future improvements:
 - environmental sensor to measure relative humidity, barometric pressure and ambient temperature
 - RTC module
 - automatic calibration
-- bettter LCD display (IPS)
+- battery status
 - screen auto brightness
 - better sensor data filtering
 
@@ -47,6 +47,8 @@ https://github.com/trteodor/TouchGFX_PortTo_STM32F407_ILI9341_XPT2046
 https://www.youtube.com/playlist?list=PLfIJKC1ud8giOsk-C4BCOwSHtbXqTNb1W
 
 http://ufnalski.edu.pl/stm32_projects/hx711_non_blocking_dma/
+
+https://www.stm32wrobotyce.pl/2023/04/26/proste-filtry-cyfrowe-cz-1-filtr-usredniajacy/
 
 https://github.com/RIYADHABBES/TouchGFX_NumericKyboard
 
