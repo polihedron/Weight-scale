@@ -23,7 +23,6 @@ future improvements:
 - automatic calibration
 - battery status
 - screen auto brightness
-- better sensor data filtering
 
 
 3D files:
