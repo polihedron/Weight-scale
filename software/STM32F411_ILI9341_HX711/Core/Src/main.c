@@ -32,6 +32,7 @@
 #include "../../Drivers/ili9341/core.h"
 #include "../../Drivers/XPT2046/XPT2046.h"
 #include "simple_filters.h"
+#include "math.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -41,13 +42,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
-
-
-
 #define FRAM_CS_DISABLE HAL_GPIO_WritePin(FRAM_CS_GPIO_Port, FRAM_CS_Pin, 1)
-#define SENSOR_MAXIMUM_IN_GRAM	20000
-#define LOAD_PLATFORM_WEIGHT_IN_GRAM	5000
 #define DISPLAY_REFRESH_DELAY_MS 500
 /* USER CODE END PD */
 
@@ -68,10 +63,9 @@
 
 uint8_t TxData[8] = { 0b0000000, 0x00000001, 0b01010101, 0b01010101, 0b01010101, 0b01010101, 0b01010101, 0b01010101 };  // clock, 25 ticks
 uint8_t RxData[8];
-uint64_t raw_reading;
+//uint64_t raw_reading;
 uint8_t sensor_read_flag = 0;
 
-double raw;
 int32_t weight_avg;
 uint32_t raw_avg;
 uint32_t raw_avg_offset;
@@ -81,10 +75,10 @@ uint32_t SoftTimer;
 //double CalibrationY0 = 0;
 //double CalibrationX1 = 0;
 //double CalibrationY1 = 0;
-double CalibrationX0 = CALIBRATION_X0;
-double CalibrationY0 = CALIBRATION_Y0;
-double CalibrationX1 = CALIBRATION_X1;
-double CalibrationY1 = CALIBRATION_Y1;
+uint32_t CalibrationX0 = CALIBRATION_X0;
+uint32_t CalibrationY0 = CALIBRATION_Y0;
+uint32_t CalibrationX1 = CALIBRATION_X1;
+uint32_t CalibrationY1 = CALIBRATION_Y1;
 
 /* USER CODE END PV */
 
@@ -93,8 +87,8 @@ void SystemClock_Config(void);
 static void MX_NVIC_Init(void);
 /* USER CODE BEGIN PFP */
 
-int32_t get_weight(uint32_t  result);
-void get_raw_weight(double *raw_reading );
+int32_t get_weight(uint64_t  result);
+uint64_t get_raw_weight();
 void doMeasure (void);
 void doMemories(void);
 
@@ -269,50 +263,53 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 }
 void doMemories(void)	{
 
-	typedef union
-	{
-	    uint32_t split[2];
-	    double d_value;
-	} split_double;
-	split_double cx0 = {0};
-	split_double cy0 = {0};
-	split_double cx1 = {0};
-	split_double cy1 = {0};
+//	typedef union
+//	{
+//	    uint32_t split[2];
+//	    double d_value;
+//	} split_double;
+//	split_double cx0 = {0};
+//	split_double cy0 = {0};
+//	split_double cx1 = {0};
+//	split_double cy1 = {0};
 
-
+	uint32_t cx0_value;
+	uint32_t cy0_value;
+	uint32_t cx1_value;
+	uint32_t cy1_value;
 
 	uint8_t memory_init = FRAM_read8(0x0000);
 	if (memory_init != 0xCC)	{
 		FRAM_write8(0x0000, 0xCC);
-		cx0.d_value = CalibrationX0;
-		cy0.d_value = CalibrationY0;
-		cx1.d_value = CalibrationX1;
-		cy1.d_value = CalibrationY1;
-		FRAM_write32(0x0001, cx0.split[0]);
-		FRAM_write32(0x0005, cx0.split[1]);
-		FRAM_write32(0x0009, cy0.split[0]);
-		FRAM_write32(0x000D, cy0.split[1]);
-		FRAM_write32(0x0011, cx1.split[0]);
-		FRAM_write32(0x0015, cx1.split[1]);
-		FRAM_write32(0x0019, cy1.split[0]);
-		FRAM_write32(0x001D, cy1.split[1]);
+		cx0_value = CalibrationX0;
+		cy0_value = CalibrationY0;
+		cx1_value = CalibrationX1;
+		cy1_value = CalibrationY1;
+		FRAM_write32(0x0001, cx0_value);
+		FRAM_write32(0x0005, cy0_value);
+		FRAM_write32(0x0009, cx1_value);
+		FRAM_write32(0x000D, cy1_value);
+//		FRAM_write32(0x0011, cx1.split[0]);
+//		FRAM_write32(0x0015, cx1.split[1]);
+//		FRAM_write32(0x0019, cy1.split[0]);
+//		FRAM_write32(0x001D, cy1.split[1]);
 	}
 
 	else	{
 
-		cx0.split[0] = FRAM_read32(0x0001);
-		cx0.split[1] = FRAM_read32(0x0005);
-		cy0.split[0] = FRAM_read32(0x0009);
-		cy0.split[1] = FRAM_read32(0x000D);
-		cx1.split[0] = FRAM_read32(0x0011);
-		cx1.split[1] = FRAM_read32(0x0015);
-		cy1.split[0] = FRAM_read32(0x0019);
-		cy1.split[1] = FRAM_read32(0x001D);
+		cx0_value = FRAM_read32(0x0001);
+		cy0_value = FRAM_read32(0x0005);
+		cx1_value = FRAM_read32(0x0009);
+		cy1_value = FRAM_read32(0x000D);
+//		cx1.split[0] = FRAM_read32(0x0011);
+//		cx1.split[1] = FRAM_read32(0x0015);
+//		cy1.split[0] = FRAM_read32(0x0019);
+//		cy1.split[1] = FRAM_read32(0x001D);
 
-		CalibrationX0 = cx0.d_value;
-		CalibrationY0 = cy0.d_value;
-		CalibrationX1 = cx1.d_value;
-		CalibrationY1 = cy1.d_value;
+		CalibrationX0 = cx0_value;
+		CalibrationY0 = cy0_value;
+		CalibrationX1 = cx1_value;
+		CalibrationY1 = cy1_value;
 	}
 
 
@@ -320,32 +317,37 @@ void doMemories(void)	{
 
 void saveMemories(void)	{
 
-	typedef union
-	{
-	    uint32_t split[2];
-	    double d_value;
-	} split_double;
-	split_double cx0 = {0};
-	split_double cy0 = {0};
-	split_double cx1 = {0};
-	split_double cy1 = {0};
-	cx0.d_value = CalibrationX0;
-	cy0.d_value = CalibrationY0;
-	cx1.d_value = CalibrationX1;
-	cy1.d_value = CalibrationY1;
+//	typedef union
+//	{
+//	    uint32_t split[2];
+//	    double d_value;
+//	} split_double;
+//	split_double cx0 = {0};
+//	split_double cy0 = {0};
+//	split_double cx1 = {0};
+//	split_double cy1 = {0};
+//	cx0.d_value = CalibrationX0;
+//	cy0.d_value = CalibrationY0;
+//	cx1.d_value = CalibrationX1;
+//	cy1.d_value = CalibrationY1;
+
+	uint32_t  cx0_value = CalibrationX0;
+	uint32_t  cy0_value = CalibrationY0;
+	uint32_t  cx1_value = CalibrationX1;
+	uint32_t  cy1_value = CalibrationY1;
 
 
 	uint8_t memory_init = FRAM_read8(0x0000);
 	if (memory_init == 0xCC)	{
 		//FRAM_write8(0x0000, 0xCC);
-		FRAM_write32(0x0001, cx0.split[0]);
-		FRAM_write32(0x0005, cx0.split[1]);
-		FRAM_write32(0x0009, cy0.split[0]);
-		FRAM_write32(0x000D, cy0.split[1]);
-		FRAM_write32(0x0011, cx1.split[0]);
-		FRAM_write32(0x0015, cx1.split[1]);
-		FRAM_write32(0x0019, cy1.split[0]);
-		FRAM_write32(0x001D, cy1.split[1]);
+		FRAM_write32(0x0001, cx0_value);
+		FRAM_write32(0x0005, cy0_value);
+		FRAM_write32(0x0009, cx1_value);
+		FRAM_write32(0x000D, cy1_value);
+//		FRAM_write32(0x0011, cx1.split[0]);
+//		FRAM_write32(0x0015, cx1.split[1]);
+//		FRAM_write32(0x0019, cy1.split[0]);
+//		FRAM_write32(0x001D, cy1.split[1]);
 	}
 
 }
@@ -358,8 +360,8 @@ void doMeasure (void) {
 
 	if (sensor_read_flag == 1)
 	{
-		get_raw_weight( &raw );
-		raw_avg_temp = filter_moving_average(raw);
+		//get_raw_weight( &raw );
+		raw_avg_temp = filter_moving_average(get_raw_weight());
 		weight_avg_temp  = filter_median(get_weight(raw_avg)- get_weight(raw_avg_offset));
 	}
 
@@ -374,7 +376,7 @@ void doMeasure (void) {
 
 		raw_avg = raw_avg_temp;
 
-		if	(weight_avg > (SENSOR_MAXIMUM_IN_GRAM - LOAD_PLATFORM_WEIGHT_IN_GRAM)  )
+		if	(weight_avg_temp > (SENSOR_MAXIMUM_IN_GRAM - LOAD_PLATFORM_WEIGHT_IN_GRAM)  )
 		{
 			weight_avg = SENSOR_MAXIMUM_IN_GRAM - LOAD_PLATFORM_WEIGHT_IN_GRAM;
 		}
@@ -390,9 +392,9 @@ void doMeasure (void) {
 
 
 
-void get_raw_weight(double *raw_reading )	{
+uint64_t get_raw_weight()	{
 
-*raw_reading = (((uint64_t) (RxData[7] & 0b00000010)) >> 1)
+	uint64_t raw_reading = (((uint64_t) (RxData[7] & 0b00000010)) >> 1)
 	| (((uint64_t) (RxData[7] & 0b00001000)) >> 2)
 	| (((uint64_t) (RxData[7] & 0b00100000)) >> 3)
 	| (((uint64_t) (RxData[7] & 0b10000000)) >> 4)
@@ -424,13 +426,14 @@ void get_raw_weight(double *raw_reading )	{
 	| (((uint64_t) (RxData[1] & 0b00100000)) << 21)
 	| (((uint64_t) (RxData[1] & 0b10000000)) << 20);
 
+return raw_reading;
 }
 
 
 
-int32_t get_weight(uint32_t  raw_reading )	{
+int32_t get_weight(uint64_t  raw_reading )	{
 
-	int32_t result = (CalibrationY1 - CalibrationY0) / (CalibrationX1 - CalibrationX0) * ((double )raw_reading - CalibrationX1) + CalibrationY1;
+	int32_t result = round (((double)CalibrationY1 - CalibrationY0) / (CalibrationX1 - CalibrationX0) * ((double)raw_reading - CalibrationX1) + CalibrationY1);
 	return result;
 }
 

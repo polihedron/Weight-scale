@@ -96,6 +96,8 @@ void saveMemories(void);
 #define CALIBRATION_Y1 10000
 #define CALIBRATION_X0 421600
 #define CALIBRATION_Y0 0
+#define SENSOR_MAXIMUM_IN_GRAM	20000
+#define LOAD_PLATFORM_WEIGHT_IN_GRAM	5000
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
