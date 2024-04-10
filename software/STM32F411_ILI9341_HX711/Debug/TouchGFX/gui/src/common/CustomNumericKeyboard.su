@@ -57,13 +57,17 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:40:7:virtual touchgfx::Container::~Container()	16	static
 ../TouchGFX/gui/include/gui/common/CustomNumericKeyboard.hpp:25:13:CustomNumericKeyboard::~CustomNumericKeyboard()	16	static
 ../TouchGFX/gui/include/gui/common/CustomNumericKeyboard.hpp:25:13:virtual CustomNumericKeyboard::~CustomNumericKeyboard()	16	static
-../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:10:1:CustomNumericKeyboard::CustomNumericKeyboard()	40	static
-../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:30:6:void CustomNumericKeyboard::setKeyMappingList()	16	static
-../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:36:6:void CustomNumericKeyboard::backspacePressedHandler()	24	static
-../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:50:6:void CustomNumericKeyboard::keyPressedhandler(touchgfx::Unicode::UnicodeChar)	16	static
-../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:56:6:void CustomNumericKeyboard::setTouchable(bool)	16	static
-../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:62:6:void CustomNumericKeyboard::clearBuffer()	16	static
-../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:70:24:touchgfx::Unicode::UnicodeChar* CustomNumericKeyboard::getBuffer()	16	static
+../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:10:1:CustomNumericKeyboard::CustomNumericKeyboard()	56	static
+../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:34:6:void CustomNumericKeyboard::setKeyMappingList()	16	static
+../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:40:6:void CustomNumericKeyboard::backspacePressedHandler()	24	static
+../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:53:6:void CustomNumericKeyboard::setOKCallback(touchgfx::GenericCallback<void>*)	16	static
+../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:58:6:void CustomNumericKeyboard::setEXITCallback(touchgfx::GenericCallback<void>*)	16	static
+../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:64:6:void CustomNumericKeyboard::okPressedHandler()	16	static
+../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:69:6:void CustomNumericKeyboard::exitPressedHandler()	16	static
+../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:74:6:void CustomNumericKeyboard::keyPressedhandler(touchgfx::Unicode::UnicodeChar)	16	static
+../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:80:6:void CustomNumericKeyboard::setTouchable(bool)	16	static
+../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:86:6:void CustomNumericKeyboard::clearBuffer()	16	static
+../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:94:24:touchgfx::Unicode::UnicodeChar* CustomNumericKeyboard::getBuffer()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:175:7:constexpr touchgfx::GenericCallback<void>::GenericCallback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:440:5:touchgfx::Callback<dest_type, void, void, void>::Callback(dest_type*, void (dest_type::*)()) [with dest_type = CustomNumericKeyboard]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:134:7:constexpr touchgfx::GenericCallback<short unsigned int>::GenericCallback()	16	static
@@ -77,7 +81,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Keyboard.hpp:74:12:touchgfx::Keyboard::Layout::~Layout()	16	static
-../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:73:1:void __static_initialization_and_destruction_0(int, int)	32	static
+../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:97:1:void __static_initialization_and_destruction_0(int, int)	32	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:touchgfx::Image::~Image()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:virtual touchgfx::Image::~Image()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Keyboard.hpp:51:7:touchgfx::Keyboard::~Keyboard()	16	static
@@ -86,5 +90,5 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = CustomNumericKeyboard; T1 = short unsigned int]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:449:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = CustomNumericKeyboard]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:459:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = CustomNumericKeyboard]	16	static
-../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:73:1:cpp)	8	static
-../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:73:1:cpp)	8	static
+../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:97:1:cpp)	8	static
+../TouchGFX/gui/src/common/CustomNumericKeyboard.cpp:97:1:cpp)	8	static

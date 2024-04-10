@@ -59,40 +59,46 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:virtual touchgfx::Image::~Image()	1
 ../TouchGFX/gui/include/gui/common/CustomNumericKeyboard.hpp:25:13:CustomNumericKeyboard::~CustomNumericKeyboard()	1
 ../TouchGFX/gui/include/gui/common/CustomNumericKeyboard.hpp:25:13:virtual CustomNumericKeyboard::~CustomNumericKeyboard()	1
-../TouchGFX/gui/include/gui/settingsscreen_screen/SettingsScreenView.hpp:13:13:SettingsScreenView::~SettingsScreenView()	1
-../TouchGFX/gui/include/gui/settingsscreen_screen/SettingsScreenView.hpp:13:13:virtual SettingsScreenView::~SettingsScreenView()	1
+../TouchGFX/gui/include/gui/settingsscreen_screen/SettingsScreenView.hpp:14:13:SettingsScreenView::~SettingsScreenView()	1
+../TouchGFX/gui/include/gui/settingsscreen_screen/SettingsScreenView.hpp:14:13:virtual SettingsScreenView::~SettingsScreenView()	1
 ../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:7:1:SettingsScreenView::SettingsScreenView()	1
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:12:6:virtual void SettingsScreenView::setupScreen()	1
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:23:6:virtual void SettingsScreenView::tearDownScreen()	1
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:28:6:virtual void SettingsScreenView::Update_Weight_Text(int32_t)	1
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:36:6:virtual void SettingsScreenView::Update_RawWeight_Text(uint32_t)	1
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:44:6:virtual void SettingsScreenView::Update_CalibrationX0_Text(uint32_t)	1
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:52:6:virtual void SettingsScreenView::Update_CalibrationY0_Text(uint32_t)	1
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:60:6:virtual void SettingsScreenView::Update_CalibrationX1_Text(uint32_t)	1
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:68:6:virtual void SettingsScreenView::Update_CalibrationY1_Text(uint32_t)	1
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:76:6:virtual void SettingsScreenView::calCx0Clicked()	1
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:127:6:virtual void SettingsScreenView::calCy0Clicked()	1
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:177:6:virtual void SettingsScreenView::calCx1Clicked()	1
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:226:6:virtual void SettingsScreenView::calCy1Clicked()	1
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:276:6:virtual void SettingsScreenView::okClicked()	5
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:348:6:virtual void SettingsScreenView::exitClicked()	1
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:397:6:virtual void SettingsScreenView::saveClicked()	1
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:402:6:virtual void SettingsScreenView::restoreClicked()	1
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:15:6:virtual void SettingsScreenView::setupScreen()	1
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:27:6:virtual void SettingsScreenView::tearDownScreen()	1
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:32:6:virtual void SettingsScreenView::Update_Weight_Text(int32_t)	1
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:40:6:virtual void SettingsScreenView::Update_RawWeight_Text(uint32_t)	1
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:48:6:virtual void SettingsScreenView::Update_CalibrationX0_Text(uint32_t)	1
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:56:6:virtual void SettingsScreenView::Update_CalibrationY0_Text(uint32_t)	1
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:64:6:virtual void SettingsScreenView::Update_CalibrationX1_Text(uint32_t)	1
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:72:6:virtual void SettingsScreenView::Update_CalibrationY1_Text(uint32_t)	1
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:81:6:void SettingsScreenView::okPressedHandler()	5
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:148:6:void SettingsScreenView::exitPressedHandler()	1
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:188:6:virtual void SettingsScreenView::calCx0Clicked()	1
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:233:6:virtual void SettingsScreenView::calCy0Clicked()	1
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:277:6:virtual void SettingsScreenView::calCx1Clicked()	1
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:320:6:virtual void SettingsScreenView::calCy1Clicked()	1
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:363:6:virtual void SettingsScreenView::saveClicked()	1
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:368:6:virtual void SettingsScreenView::restoreClicked()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:175:7:constexpr touchgfx::GenericCallback<void>::GenericCallback()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:440:5:touchgfx::Callback<dest_type, void, void, void>::Callback(dest_type*, void (dest_type::*)()) [with dest_type = SettingsScreenView]	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:touchgfx::Callback<SettingsScreenView>::~Callback()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:virtual touchgfx::Callback<SettingsScreenView>::~Callback()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Keyboard.hpp:74:12:touchgfx::Keyboard::Layout::~Layout()	1
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:405:1:void __static_initialization_and_destruction_0(int, int)	5
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:371:1:void __static_initialization_and_destruction_0(int, int)	5
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Keyboard.hpp:51:7:touchgfx::Keyboard::~Keyboard()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Keyboard.hpp:51:7:virtual touchgfx::Keyboard::~Keyboard()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:touchgfx::Callback<CustomNumericKeyboard>::~Callback()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:virtual touchgfx::Callback<CustomNumericKeyboard>::~Callback()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<CustomNumericKeyboard, short unsigned int>::~Callback()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<CustomNumericKeyboard, short unsigned int>::~Callback()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:449:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = SettingsScreenView]	2
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:459:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = SettingsScreenView]	5
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = short unsigned int]	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = short unsigned int]	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:449:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = CustomNumericKeyboard]	2
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:459:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = CustomNumericKeyboard]	5
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = CustomNumericKeyboard; T1 = short unsigned int]	2
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = CustomNumericKeyboard; T1 = short unsigned int]	5
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:405:1:cpp)	1
-../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:405:1:cpp)	1
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:371:1:cpp)	1
+../TouchGFX/gui/src/settingsscreen_screen/SettingsScreenView.cpp:371:1:cpp)	1

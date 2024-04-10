@@ -30,16 +30,19 @@ public:
      */
     void setTouchable(bool touch);
 
-    //  void setKeyboardDoneReturnPressedAction(GenericCallback<Unicode::UnicodeChar[]>& callback);
-
     Unicode::UnicodeChar *getBuffer ();
 
     void clearBuffer();
+
+    void setOKCallback(GenericCallback<void,void,void> * callback);
+
+    void setEXITCallback(GenericCallback<void,void,void> * callback);
 
     /**
      * The keyboard which this CustomKeyboard wraps.
      */
     Keyboard keyboard;
+
 
 private:
 
@@ -48,8 +51,6 @@ private:
      * The size determines how much text the keyboard can contain in its textfield.
      */
     static const uint8_t BUFFER_SIZE = 8;
-
-
 
     /**
      * The buffer used by the keyboard for text input.
@@ -60,6 +61,10 @@ private:
      * Callback for the backspace button.
      */
      Callback<CustomNumericKeyboard> backspacePressed;
+
+     Callback<CustomNumericKeyboard> okPressed;
+
+     Callback<CustomNumericKeyboard> exitPressed;
 
     /**
      * Callback for when keys are pressed on the keyboard.
@@ -75,7 +80,10 @@ private:
      * Callback handler for the backspace button.
      */
     void backspacePressedHandler();
-   
+
+    void okPressedHandler();
+
+    void exitPressedHandler();
 
     /**
      * Callback handler for key presses.
@@ -83,7 +91,8 @@ private:
      */
     void keyPressedhandler(Unicode::UnicodeChar keyChar);
 
-    GenericCallback < Unicode::UnicodeChar[] > * doneReturnCallback;
+
+
 };
 
 #endif /* TGFXKEYBOARD_HPP_ */

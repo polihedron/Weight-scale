@@ -28,14 +28,6 @@ public:
     {
         // Override and implement this function in SettingsScreen
     }
-    virtual void okClicked()
-    {
-        // Override and implement this function in SettingsScreen
-    }
-    virtual void exitClicked()
-    {
-        // Override and implement this function in SettingsScreen
-    }
     virtual void calCy0Clicked()
     {
         // Override and implement this function in SettingsScreen
@@ -74,8 +66,6 @@ protected:
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  flexButtonCy0;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  flexButtonCx0;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  flexButtonCx1;
-    touchgfx::ImageButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  flexButtonOK;
-    touchgfx::ImageButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  >  flexButtonExit;
     touchgfx::TextAreaWithOneWildcard textAreaCx0;
     touchgfx::TextAreaWithOneWildcard textAreaCy0;
     touchgfx::TextAreaWithOneWildcard textArea1;

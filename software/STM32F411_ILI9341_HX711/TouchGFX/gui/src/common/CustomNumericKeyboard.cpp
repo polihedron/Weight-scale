@@ -2,17 +2,21 @@
 #include <string.h>
 #include "touchgfx/Color.hpp"
 
-static const int KEYBOARD_WIDTH_NUMERIC = 124;
-static const int KEYBOARD_HEIGTH_NUMERIC = 192;
-static const int KEYBOARD_X_POSITION_NUMERIC = 0 * 12;
-static const int KEYBOARD_Y_POSITION_NUMERIC = 0 * 315;
+static const int KEYBOARD_WIDTH_NUMERIC = 210;
+static const int KEYBOARD_HEIGTH_NUMERIC = 240;
+static const int KEYBOARD_X_POSITION_NUMERIC =  0;
+static const int KEYBOARD_Y_POSITION_NUMERIC =  0;
 
 CustomNumericKeyboard::CustomNumericKeyboard() : keyboard(),
     backspacePressed(this, &CustomNumericKeyboard::backspacePressedHandler),
+	okPressed(this,&CustomNumericKeyboard::okPressedHandler),
+	exitPressed(this,&CustomNumericKeyboard::exitPressedHandler),
     keyPressed(this, &CustomNumericKeyboard::keyPressedhandler)
 {
     //Set the callbacks for the callback areas of the keyboard and set its layout.
 	layoutNumeric.callbackAreaArray[0].callback = &backspacePressed;
+	layoutNumeric.callbackAreaArray[1].callback = &exitPressed;
+	layoutNumeric.callbackAreaArray[2].callback = &okPressed;
 
     keyboard.setLayout(&layoutNumeric);
     keyboard.setKeyListener(keyPressed);
@@ -46,6 +50,26 @@ void CustomNumericKeyboard::backspacePressedHandler()
     invalidate();
 }
 
+void CustomNumericKeyboard::setOKCallback(GenericCallback<void,void,void> * callback){
+
+	layoutNumeric.callbackAreaArray[2].callback= callback;
+}
+
+void CustomNumericKeyboard::setEXITCallback(GenericCallback<void,void,void> * callback){
+
+	layoutNumeric.callbackAreaArray[1].callback= callback;
+
+}
+
+void CustomNumericKeyboard::okPressedHandler()
+{
+
+}
+
+void CustomNumericKeyboard::exitPressedHandler()
+{
+
+}
 
 void CustomNumericKeyboard::keyPressedhandler(Unicode::UnicodeChar keyChar)
 {

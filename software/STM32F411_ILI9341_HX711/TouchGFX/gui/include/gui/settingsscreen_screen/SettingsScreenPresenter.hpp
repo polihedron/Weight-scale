@@ -34,10 +34,10 @@ public:
     virtual void Update_CalibrationX1_Text(uint32_t value);
     virtual void Update_CalibrationY1_Text(uint32_t value);
 
-    virtual void Cy1_Update(double value);
-    virtual void Cy0_Update(double value);
-    virtual void Cx1_Update(double value);
-    virtual void Cx0_Update(double value);
+    virtual void Cy1_Update(uint32_t value);
+    virtual void Cy0_Update(uint32_t value);
+    virtual void Cx1_Update(uint32_t value);
+    virtual void Cx0_Update(uint32_t value);
 
     virtual void save_Calibration();
     virtual void restore_Calibration();

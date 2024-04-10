@@ -29,7 +29,7 @@ SettingsScreenViewBase::SettingsScreenViewBase() :
     textAreaCy1.setPosition(168, 57, 152, 36);
     textAreaCy1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textAreaCy1.setLinespacing(0);
-    Unicode::snprintf(textAreaCy1Buffer, TEXTAREACY1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_FVV4).getText());
+    textAreaCy1Buffer[0] = 0;
     textAreaCy1.setWildcard(textAreaCy1Buffer);
     textAreaCy1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_C0HY));
     add(textAreaCy1);
@@ -37,7 +37,7 @@ SettingsScreenViewBase::SettingsScreenViewBase() :
     textAreaCx1.setPosition(7, 57, 148, 36);
     textAreaCx1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textAreaCx1.setLinespacing(0);
-    Unicode::snprintf(textAreaCx1Buffer, TEXTAREACX1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_CGV2).getText());
+    textAreaCx1Buffer[0] = 0;
     textAreaCx1.setWildcard(textAreaCx1Buffer);
     textAreaCx1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_P04L));
     add(textAreaCx1);
@@ -74,30 +74,10 @@ SettingsScreenViewBase::SettingsScreenViewBase() :
     flexButtonCx1.setPosition(0, 57, 155, 36);
     add(flexButtonCx1);
 
-    flexButtonOK.setBoxWithBorderPosition(0, 0, 62, 48);
-    flexButtonOK.setBorderSize(0);
-    flexButtonOK.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    flexButtonOK.setBitmaps(Bitmap(BITMAP_KEYBOARD_KEY_OK_ID), Bitmap(BITMAP_KEYBOARD_KEY_OK_HIGHLIGHTED_ID));
-    flexButtonOK.setBitmapXY(0, 0);
-    flexButtonOK.setVisible(false);
-    flexButtonOK.setAction(flexButtonCallback);
-    flexButtonOK.setPosition(98, 192, 62, 48);
-    add(flexButtonOK);
-
-    flexButtonExit.setBoxWithBorderPosition(0, 0, 62, 48);
-    flexButtonExit.setBorderSize(0);
-    flexButtonExit.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    flexButtonExit.setBitmaps(Bitmap(BITMAP_KEYBOARD_KEY_EXIT_ID), Bitmap(BITMAP_KEYBOARD_KEY_EXIT_HIGHLIGHTED_ID));
-    flexButtonExit.setBitmapXY(0, 0);
-    flexButtonExit.setVisible(false);
-    flexButtonExit.setAction(flexButtonCallback);
-    flexButtonExit.setPosition(160, 192, 62, 48);
-    add(flexButtonExit);
-
     textAreaCx0.setPosition(7, 9, 148, 36);
     textAreaCx0.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textAreaCx0.setLinespacing(0);
-    Unicode::snprintf(textAreaCx0Buffer, TEXTAREACX0_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_4P3W).getText());
+    textAreaCx0Buffer[0] = 0;
     textAreaCx0.setWildcard(textAreaCx0Buffer);
     textAreaCx0.setTypedText(touchgfx::TypedText(T___SINGLEUSE_U2NW));
     add(textAreaCx0);
@@ -105,7 +85,7 @@ SettingsScreenViewBase::SettingsScreenViewBase() :
     textAreaCy0.setPosition(168, 9, 152, 36);
     textAreaCy0.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textAreaCy0.setLinespacing(0);
-    Unicode::snprintf(textAreaCy0Buffer, TEXTAREACY0_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_9PBW).getText());
+    textAreaCy0Buffer[0] = 0;
     textAreaCy0.setWildcard(textAreaCy0Buffer);
     textAreaCy0.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7OP1));
     add(textAreaCy0);
@@ -231,20 +211,6 @@ void SettingsScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractB
         //When flexButtonCy1 clicked call virtual function
         //Call calCy1Clicked
         calCy1Clicked();
-    }
-    if (&src == &flexButtonOK)
-    {
-        //Interaction3
-        //When flexButtonOK clicked call virtual function
-        //Call okClicked
-        okClicked();
-    }
-    if (&src == &flexButtonExit)
-    {
-        //Interaction4
-        //When flexButtonExit clicked call virtual function
-        //Call exitClicked
-        exitClicked();
     }
     if (&src == &flexButtonCy0)
     {

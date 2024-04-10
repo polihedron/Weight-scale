@@ -39,7 +39,7 @@
               "Blue": 255
             },
             "Wildcard1": {
-              "TextId": "__SingleUse_LYWU",
+              "TextId": "__SingleUse_PQZQ",
               "UseBuffer": true,
               "BufferSize": 8
             }
@@ -148,7 +148,6 @@
               "Blue": 255
             },
             "Wildcard1": {
-              "TextId": "__SingleUse_FVV4",
               "UseBuffer": true,
               "BufferSize": 7
             }
@@ -168,7 +167,6 @@
               "Blue": 255
             },
             "Wildcard1": {
-              "TextId": "__SingleUse_CGV2",
               "UseBuffer": true,
               "BufferSize": 10
             }
@@ -325,90 +323,6 @@
             ]
           },
           {
-            "Type": "FlexButton",
-            "Name": "flexButtonOK",
-            "X": 98,
-            "Y": 192,
-            "Width": 62,
-            "Height": 48,
-            "Visible": false,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "ImageButtonStyle",
-                "ImageReleased": "keyboard_key_ok.png",
-                "ImagePressed": "keyboard_key_ok_highlighted.png"
-              },
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 62,
-                "Height": 48,
-                "LockToFlexButtonSize": true,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "flexButtonExit",
-            "X": 160,
-            "Y": 192,
-            "Width": 62,
-            "Height": 48,
-            "Visible": false,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "ImageButtonStyle",
-                "ImageReleased": "keyboard_key_exit.png",
-                "ImagePressed": "keyboard_key_exit_highlighted.png"
-              },
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 62,
-                "Height": 48,
-                "LockToFlexButtonSize": true,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          },
-          {
             "Type": "TextArea",
             "Name": "textAreaCx0",
             "X": 7,
@@ -423,7 +337,6 @@
               "Blue": 255
             },
             "Wildcard1": {
-              "TextId": "__SingleUse_4P3W",
               "UseBuffer": true,
               "BufferSize": 10
             }
@@ -443,7 +356,6 @@
               "Blue": 255
             },
             "Wildcard1": {
-              "TextId": "__SingleUse_9PBW",
               "UseBuffer": true,
               "BufferSize": 10
             }
@@ -667,8 +579,7 @@
           {
             "InteractionName": "Interaction3",
             "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "flexButtonOK"
+              "Type": "TriggerClicked"
             },
             "Action": {
               "Type": "ActionCustom",
@@ -678,8 +589,7 @@
           {
             "InteractionName": "Interaction4",
             "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "flexButtonExit"
+              "Type": "TriggerClicked"
             },
             "Action": {
               "Type": "ActionCustom",

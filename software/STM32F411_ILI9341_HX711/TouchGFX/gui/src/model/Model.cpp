@@ -3,13 +3,14 @@
 #ifndef SIMULATOR
 //#include "stm32f4xx_hal.h"
 #include "main.h"
+
 extern __IO uint32_t raw_avg;
 extern __IO uint32_t raw_avg_offset;
 extern __IO int32_t weight_avg;
-extern __IO double CalibrationX0;
-extern __IO double CalibrationY0;
-extern __IO double CalibrationX1;
-extern __IO double CalibrationY1;
+extern __IO uint32_t CalibrationX0;
+extern __IO uint32_t CalibrationY0;
+extern __IO uint32_t CalibrationX1;
+extern __IO uint32_t CalibrationY1;
 #endif
 
 Model::Model() : modelListener(0)
@@ -34,24 +35,55 @@ void Model::reset_weight(){
 #endif
 }
 
-void Model::Cx0_Update(double value){
+void Model::Cx0_Update(uint32_t value){
 #ifndef SIMULATOR
-	CalibrationX0 = value;
+	if (value >= CalibrationX1)	{
+		// TBD
+	}
+	else	{
+		CalibrationX0 = value;
+	}
+
+
 #endif
 }
-void Model::Cx1_Update(double value){
+void Model::Cx1_Update(uint32_t value){
 #ifndef SIMULATOR
-	CalibrationX1 = value;
+
+	if (value <= CalibrationX0)	{
+	// TBD
+	}
+	else	{
+		CalibrationX1 = value;
+	}
 #endif
 }
-void Model::Cy0_Update(double value){
+void Model::Cy0_Update(uint32_t value){
 #ifndef SIMULATOR
-	CalibrationY0 = value;
+
+	if (value >= CalibrationY1){
+		// TBD
+	}
+	else if (value > (SENSOR_MAXIMUM_IN_GRAM - LOAD_PLATFORM_WEIGHT_IN_GRAM))	{
+		CalibrationY0 = SENSOR_MAXIMUM_IN_GRAM - LOAD_PLATFORM_WEIGHT_IN_GRAM;
+	}
+	else	{
+		CalibrationY0 = value;
+	}
 #endif
 }
-void Model::Cy1_Update(double value){
+void Model::Cy1_Update(uint32_t value){
 #ifndef SIMULATOR
-	CalibrationY1 = value;
+
+	if (value <= CalibrationY0){
+		// TBD
+	}
+	else if (value > (SENSOR_MAXIMUM_IN_GRAM - LOAD_PLATFORM_WEIGHT_IN_GRAM))	{
+		CalibrationY1 = SENSOR_MAXIMUM_IN_GRAM - LOAD_PLATFORM_WEIGHT_IN_GRAM;
+	}
+	else	{
+		CalibrationY1 = value;
+	}
 #endif
 }
 

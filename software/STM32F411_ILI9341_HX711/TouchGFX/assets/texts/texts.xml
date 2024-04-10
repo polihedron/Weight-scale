@@ -5,62 +5,45 @@
   </Languages>
   <Texts>
     <TextGroup Id="Group1">
-      <Text Id="EnteredText" Alignment="Right" TypographyId="KeyboardDisplay">
+      <Text Id="EnteredText" Alignment="Right" TypographyId="KeyboardNumeric">
         <Translation Language="GB" Alignment="Right">&lt;placeholder&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_V8WH" Alignment="Left" TypographyId="KeyboardNumeric">
+        <Translation Language="GB">1888888</Translation>
+      </Text>
+      <Text Id="__SingleUse_FU0Y" Alignment="Center" TypographyId="KeyboardNumeric">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_XONX" Alignment="Left" TypographyId="KeyboardNumeric">
+        <Translation Language="GB">15000</Translation>
+      </Text>
+      <Text Id="__SingleUse_HPKF" Alignment="Center" TypographyId="KeyboardNumeric">
+        <Translation Language="GB">&lt;value&gt;g</Translation>
+      </Text>
+      <Text Id="__SingleUse_U2NW" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">x0: &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_7OP1" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">y0: &lt;value&gt;g</Translation>
+      </Text>
+      <Text Id="__SingleUse_P04L" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">x1: &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_C0HY" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">y1: &lt;value&gt;g</Translation>
       </Text>
       <Text Id="__SingleUse_95FO" Alignment="Right" TypographyId="Large">
         <Translation Language="GB"> &lt;value&gt;g</Translation>
       </Text>
-      <Text Id="ResourceId1" Alignment="Right" TypographyId="KeyboardDisplay">
-        <Translation Language="GB">New Text</Translation>
-      </Text>
-      <Text Id="__SingleUse_LYWU" Alignment="Left" TypographyId="KeyboardNumeric">
+      <Text Id="__SingleUse_PQZQ" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">15000</Translation>
       </Text>
     </TextGroup>
-    <TextGroup Id="Unsorted">
-      <Text Id="__SingleUse_V8WH" Alignment="Left" TypographyId="Medium">
-        <Translation Language="GB">1888888</Translation>
-      </Text>
-      <Text Id="__SingleUse_FU0Y" Alignment="Center" TypographyId="Medium">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_XONX" Alignment="Left" TypographyId="Medium">
-        <Translation Language="GB">15000</Translation>
-      </Text>
-      <Text Id="__SingleUse_HPKF" Alignment="Center" TypographyId="Medium">
-        <Translation Language="GB">&lt;value&gt;g</Translation>
-      </Text>
-      <Text Id="__SingleUse_9PBW" Alignment="Left" TypographyId="KeyboardDisplay">
-        <Translation Language="GB">0</Translation>
-      </Text>
-      <Text Id="__SingleUse_7OP1" Alignment="Left" TypographyId="KeyboardDisplay">
-        <Translation Language="GB">y0: &lt;value&gt;g</Translation>
-      </Text>
-      <Text Id="__SingleUse_4P3W" Alignment="Left" TypographyId="KeyboardDisplay">
-        <Translation Language="GB">0</Translation>
-      </Text>
-      <Text Id="__SingleUse_U2NW" Alignment="Left" TypographyId="KeyboardDisplay">
-        <Translation Language="GB">x0: &lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_CGV2" Alignment="Left" TypographyId="KeyboardDisplay">
-        <Translation Language="GB">0</Translation>
-      </Text>
-      <Text Id="__SingleUse_P04L" Alignment="Left" TypographyId="KeyboardDisplay">
-        <Translation Language="GB">x1: &lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_FVV4" Alignment="Left" TypographyId="KeyboardDisplay">
-        <Translation Language="GB">0</Translation>
-      </Text>
-      <Text Id="__SingleUse_C0HY" Alignment="Left" TypographyId="KeyboardDisplay">
-        <Translation Language="GB">y1: &lt;value&gt;g</Translation>
-      </Text>
-    </TextGroup>
+    <TextGroup Id="Unsorted" />
   </Texts>
   <Typographies>
     <Typography Id="Large" Font="bahnschrift.ttf" Size="102" Bpp="8" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="-" WildcardCharacterRanges="0-9" />
-    <Typography Id="KeyboardNumeric" Font="bahnschrift.ttf" Size="34" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="-" WildcardCharacterRanges="0-9" />
-    <Typography Id="KeyboardDisplay" Font="bahnschrift.ttf" Size="28" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
-    <Typography Id="Medium" Font="bahnschrift.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="-" WildcardCharacterRanges="0-9" />
+    <Typography Id="KeyboardNumeric" Font="bahnschrift.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="-" WildcardCharacterRanges="0-9" />
+    <Typography Id="Small" Font="bahnschrift.ttf" Size="30" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="-" WildcardCharacterRanges="0-9" />
   </Typographies>
 </TextDatabase>

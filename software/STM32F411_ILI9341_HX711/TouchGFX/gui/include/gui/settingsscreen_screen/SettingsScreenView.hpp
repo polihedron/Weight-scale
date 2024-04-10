@@ -8,6 +8,7 @@
 
 class SettingsScreenView : public SettingsScreenViewBase
 {
+
 public:
     SettingsScreenView();
     virtual ~SettingsScreenView() {}
@@ -24,18 +25,29 @@ public:
     virtual void calCx1Clicked();
     virtual void calCy0Clicked();
     virtual void calCy1Clicked();
-    virtual void okClicked();
-    virtual void exitClicked();
     virtual void saveClicked();
     virtual void restoreClicked();
 
+    void okPressedHandler();
+    void exitPressedHandler();
+
+
+
+
 protected:
-private:
+
     CustomNumericKeyboard customKeyboard;
-    uint8_t text_Cx0;
-    uint8_t text_Cx1;
-    uint8_t text_Cy0;
-    uint8_t text_Cy1;
+
+    Callback<SettingsScreenView> okPressed;
+
+    Callback<SettingsScreenView> exitPressed;
+
+    int text_C;
+
+
+private:
+
+
 };
 
 #endif // SETTINGSSCREENVIEW_HPP

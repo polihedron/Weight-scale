@@ -23,7 +23,6 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:465:10:void touchgfx::Drawable::setWidthHeight(const touchgfx::Bitmap&)	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:490:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:515:10:void touchgfx::Drawable::setVisible(bool)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:525:10:void touchgfx::Drawable::setTouchable(bool)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:537:10:bool touchgfx::Drawable::isVisible() const	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:549:10:bool touchgfx::Drawable::isTouchable() const	16	static
@@ -122,22 +121,20 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:42:5:touchgfx::PainterRGB565::PainterRGB565(touchgfx::colortype)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:47:18:virtual void touchgfx::PainterRGB565::setColor(touchgfx::colortype)	32	static
 ../TouchGFX/generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp:27:18:virtual void SettingsScreenViewBase::calCy1Clicked()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp:31:18:virtual void SettingsScreenViewBase::okClicked()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp:35:18:virtual void SettingsScreenViewBase::exitClicked()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp:39:18:virtual void SettingsScreenViewBase::calCy0Clicked()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp:43:18:virtual void SettingsScreenViewBase::calCx0Clicked()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp:47:18:virtual void SettingsScreenViewBase::calCx1Clicked()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp:51:18:virtual void SettingsScreenViewBase::saveClicked()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp:55:18:virtual void SettingsScreenViewBase::restoreClicked()	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp:61:26:FrontendApplication& SettingsScreenViewBase::application()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp:31:18:virtual void SettingsScreenViewBase::calCy0Clicked()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp:35:18:virtual void SettingsScreenViewBase::calCx0Clicked()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp:39:18:virtual void SettingsScreenViewBase::calCx1Clicked()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp:43:18:virtual void SettingsScreenViewBase::saveClicked()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp:47:18:virtual void SettingsScreenViewBase::restoreClicked()	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/settingsscreen_screen/SettingsScreenViewBase.hpp:53:26:FrontendApplication& SettingsScreenViewBase::application()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<SettingsScreenPresenter>::~View()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<SettingsScreenPresenter>::~View()	16	static
-../TouchGFX/generated/gui_generated/src/settingsscreen_screen/SettingsScreenViewBase.cpp:10:1:SettingsScreenViewBase::SettingsScreenViewBase()	640	static
-../TouchGFX/generated/gui_generated/src/settingsscreen_screen/SettingsScreenViewBase.cpp:205:1:SettingsScreenViewBase::~SettingsScreenViewBase()	16	static
-../TouchGFX/generated/gui_generated/src/settingsscreen_screen/SettingsScreenViewBase.cpp:205:1:virtual SettingsScreenViewBase::~SettingsScreenViewBase()	16	static
-../TouchGFX/generated/gui_generated/src/settingsscreen_screen/SettingsScreenViewBase.cpp:210:6:virtual void SettingsScreenViewBase::setupScreen()	16	static
-../TouchGFX/generated/gui_generated/src/settingsscreen_screen/SettingsScreenViewBase.cpp:215:6:void SettingsScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
-../TouchGFX/generated/gui_generated/src/settingsscreen_screen/SettingsScreenViewBase.cpp:226:6:void SettingsScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
+../TouchGFX/generated/gui_generated/src/settingsscreen_screen/SettingsScreenViewBase.cpp:10:1:SettingsScreenViewBase::SettingsScreenViewBase()	520	static
+../TouchGFX/generated/gui_generated/src/settingsscreen_screen/SettingsScreenViewBase.cpp:185:1:SettingsScreenViewBase::~SettingsScreenViewBase()	16	static
+../TouchGFX/generated/gui_generated/src/settingsscreen_screen/SettingsScreenViewBase.cpp:185:1:virtual SettingsScreenViewBase::~SettingsScreenViewBase()	16	static
+../TouchGFX/generated/gui_generated/src/settingsscreen_screen/SettingsScreenViewBase.cpp:190:6:virtual void SettingsScreenViewBase::setupScreen()	16	static
+../TouchGFX/generated/gui_generated/src/settingsscreen_screen/SettingsScreenViewBase.cpp:195:6:void SettingsScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
+../TouchGFX/generated/gui_generated/src/settingsscreen_screen/SettingsScreenViewBase.cpp:206:6:void SettingsScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = SettingsScreenPresenter]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::ClickButtonTrigger()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	16	static
@@ -145,9 +142,6 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:31:7:touchgfx::BoxWithBorder::~BoxWithBorder()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:31:7:virtual touchgfx::BoxWithBorder::~BoxWithBorder()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:48:5:touchgfx::ImageButtonStyle<T>::ImageButtonStyle() [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	32	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:48:5:touchgfx::ImageButtonStyle<T>::ImageButtonStyle() [with T = touchgfx::ClickButtonTrigger]	32	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:134:7:constexpr touchgfx::GenericCallback<const touchgfx::AbstractButton&>::GenericCallback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:373:5:touchgfx::Callback<dest_type, T1, void, void>::Callback(dest_type*, void (dest_type::*)(T1)) [with dest_type = SettingsScreenViewBase; T1 = const touchgfx::AbstractButton&]	24	static
@@ -156,8 +150,6 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:61:10:void touchgfx::BoxWithBorderButtonStyle<T>::setBoxWithBorderPosition(int16_t, int16_t, int16_t, int16_t) [with T = touchgfx::ClickButtonTrigger]	40	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:110:10:void touchgfx::BoxWithBorderButtonStyle<T>::setBorderSize(uint8_t) [with T = touchgfx::ClickButtonTrigger]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:94:10:void touchgfx::BoxWithBorderButtonStyle<T>::setBoxWithBorderColors(touchgfx::colortype, touchgfx::colortype, touchgfx::colortype, touchgfx::colortype) [with T = touchgfx::ClickButtonTrigger]	24	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:61:18:void touchgfx::ImageButtonStyle<T>::setBitmaps(const touchgfx::Bitmap&, const touchgfx::Bitmap&) [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	24	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:76:10:void touchgfx::ImageButtonStyle<T>::setBitmapXY(uint16_t, uint16_t) [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:61:18:void touchgfx::ImageButtonStyle<T>::setBitmaps(const touchgfx::Bitmap&, const touchgfx::Bitmap&) [with T = touchgfx::ClickButtonTrigger]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:76:10:void touchgfx::ImageButtonStyle<T>::setBitmapXY(uint16_t, uint16_t) [with T = touchgfx::ClickButtonTrigger]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:95:10:void touchgfx::Line::setStart(T, T) [with T = int]	48	static
@@ -168,7 +160,6 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::AbstractButtonContainer&]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:138:13:touchgfx::GenericCallback<T1, void, void>::~GenericCallback() [with T1 = const touchgfx::AbstractButtonContainer&]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	24	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:97:18:void touchgfx::ImageButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:97:18:void touchgfx::ImageButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<SettingsScreenViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<SettingsScreenViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	16	static
@@ -176,8 +167,8 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<SettingsScreenViewBase, const touchgfx::AbstractButton&>::~Callback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:45:7:touchgfx::ImageButtonStyle<touchgfx::ClickButtonTrigger>::~ImageButtonStyle()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:45:7:virtual touchgfx::ImageButtonStyle<touchgfx::ClickButtonTrigger>::~ImageButtonStyle()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:45:7:touchgfx::ImageButtonStyle<touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger> >::~ImageButtonStyle()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:45:7:virtual touchgfx::ImageButtonStyle<touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger> >::~ImageButtonStyle()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:31:7:touchgfx::Button::~Button()	16	static
@@ -193,5 +184,4 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = SettingsScreenViewBase; T1 = const touchgfx::AbstractButton&]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = SettingsScreenViewBase; T1 = const touchgfx::AbstractButton&]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:104:18:void touchgfx::ImageButtonStyle<T>::handleAlphaUpdated() [with T = touchgfx::ClickButtonTrigger]	24	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:104:18:void touchgfx::ImageButtonStyle<T>::handleAlphaUpdated() [with T = touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:131:18:void touchgfx::BoxWithBorderButtonStyle<T>::handleAlphaUpdated() [with T = touchgfx::ClickButtonTrigger]	24	static
